@@ -1,0 +1,17 @@
+spec_version: "0.1.0"
+name: programming-tutor-agent
+version: 0.1.0
+description: A framework-independent programming tutor that explains code, diagnoses common errors, and generates structured practice tasks.
+skills:
+  - code-explanation
+  - debugging
+  - practice-generation
+tools:
+  - explain-code
+  - debug-code
+  - generate-practice
+tags:
+  - programming
+  - education
+  - tutoring
+  - code-analysis

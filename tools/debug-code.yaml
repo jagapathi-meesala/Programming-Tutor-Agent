@@ -1,0 +1,4 @@
+name: debug-code
+purpose: See the corresponding skill and Python implementation for behavior.
+input_schema: {}
+output: structured-object
