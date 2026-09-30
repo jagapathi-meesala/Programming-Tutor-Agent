@@ -1,4 +1,31 @@
 name: generate-practice
-purpose: See the corresponding skill and Python implementation for behavior.
-input_schema: {}
-output: structured-object
+description: Generate programming practice exercises based on a requested language, topic, and difficulty.
+version: 1.0.0
+input_schema:
+  type: object
+  properties:
+    language:
+      type: string
+      description: Programming language for the exercises.
+    topic:
+      type: string
+      description: Programming topic to practice.
+    difficulty:
+      type: string
+      description: Requested difficulty level.
+      enum:
+        - beginner
+        - intermediate
+        - advanced
+    count:
+      type: integer
+      description: Number of exercises to generate.
+      minimum: 1
+      maximum: 20
+  required:
+    - language
+    - topic
+implementation:
+  type: script
+  path: generate-practice.py
+  runtime: python3

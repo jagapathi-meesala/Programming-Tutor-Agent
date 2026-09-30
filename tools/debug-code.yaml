@@ -1,4 +1,21 @@
 name: debug-code
-purpose: See the corresponding skill and Python implementation for behavior.
-input_schema: {}
-output: structured-object
+description: Analyze source code for errors, explain likely causes, and provide structured debugging guidance.
+version: 1.0.0
+input_schema:
+  type: object
+  properties:
+    code:
+      type: string
+      description: Source code to analyze.
+    language:
+      type: string
+      description: Programming language of the source code.
+    error:
+      type: string
+      description: Error message or observed problem, if available.
+  required:
+    - code
+implementation:
+  type: script
+  path: debug-code.py
+  runtime: python3

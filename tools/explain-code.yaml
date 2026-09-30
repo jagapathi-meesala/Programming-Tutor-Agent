@@ -1,4 +1,24 @@
 name: explain-code
-purpose: See the corresponding skill and Python implementation for behavior.
-input_schema: {}
-output: structured-object
+description: Explain source code clearly by describing its purpose, structure, logic, and important operations.
+version: 1.0.0
+input_schema:
+  type: object
+  properties:
+    code:
+      type: string
+      description: Source code to explain.
+    language:
+      type: string
+      description: Programming language of the source code.
+    detail_level:
+      type: string
+      description: Requested explanation depth.
+      enum:
+        - concise
+        - detailed
+  required:
+    - code
+implementation:
+  type: script
+  path: explain-code.py
+  runtime: python3
